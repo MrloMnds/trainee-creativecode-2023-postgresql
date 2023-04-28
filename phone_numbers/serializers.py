@@ -11,3 +11,9 @@ class PhoneNumberSerializer(serializers.ModelSerializer):
         extra_kwargs = {
             "contact_id": {"read_only": True}
         }
+
+
+class PhoneNumberReturnSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PhoneNumber
+        fields = ["id", "number"]
